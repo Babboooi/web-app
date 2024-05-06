@@ -1,0 +1,49 @@
+body{
+    background-color: beige;
+}
+
+*,
+*:before,
+*:after{
+   box-sizing:border-box;
+}
+html,body{
+   height:100%;
+   margin:0;
+   padding:0;
+   text-align:center;
+}
+
+#panel-1{
+   height:100%;
+   background: pink;
+
+}
+#panel-2{
+   height:100%;
+   display:none;
+   background:orange;
+}
+button{
+   padding:10px;
+}
+button:hover{
+   cursor:pointer;
+}
+
+/*
+=================================================
+TYPOGRAPHY
+=================================================
+*/
+h1{
+    margin:0;
+    padding:150px 0 50px 0;
+    font-family: 'Oswald', sans-serif;
+    font-size:54px;
+ }
+ p{
+  font-family: 'Roboto', sans-serif; 
+  font-size:18px;
+ }
+ 
