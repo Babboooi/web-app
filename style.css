@@ -9,20 +9,14 @@ body{
 }
 html,body{
    height:100%;
-   margin:0;
-   padding:0;
+   margin:auto;
+   padding:400, 803;
    text-align:center;
 }
 
-#panel-1{
+#Questions{
    height:100%;
    background: pink;
-
-}
-#panel-2{
-   height:100%;
-   display:none;
-   background:orange;
 }
 button{
    padding:10px;
@@ -37,7 +31,7 @@ TYPOGRAPHY
 =================================================
 */
 h1{
-    margin:0;
+    margin:auto;
     padding:150px 0 50px 0;
     font-family: 'Oswald', sans-serif;
     font-size:54px;
