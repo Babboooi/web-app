@@ -19,6 +19,15 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
     </head>
     <body>
+
+        <div class="container">
+            <h1>Random Question Generator</h1>
+            <div class="question-container">
+                <h2 id="question">Click below to generate a question!</h2>
+            </div>
+            <button id="generate-btn">Generate Question</button>
+            
+        </div>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -26,40 +35,3 @@
         <script src="scripts.js" async defer></script>
     </body>
 </html>
-
-<body>
-
-    <!-- PANEL 1 -->
-    <div class="Questions" id="Questions">           
-        <h1>Random Question Generator</h1>
-        <div id=""questionDisplay"></div>
-        <br>
-        <p>Have fun the random questions.</p>
-        <button onclick="newQuestion()">Click for next Question</button>
-        <br>
-    </div>
-    <script src="script.js"></script>
-
-    <!-- PANEL 2 -->
-    <div class="Answer" id="Answer">
-        <h1>Answer</h1>
-        <button onclick="hide();">Panel 1</button>
-        
-    </div>
-
-</body>
-
-<button type="button" onClick="clicks++;updateClickCount();" id="push">UP</button>
-
-       <div id="clickCount">0</div>
-
-       <button type="button" onClick="clicks--;updateClickCount();" id="push">Down</button>
-
-       <script type="text/javascript">
-           var clicks = 0;
-           function updateClickCount() {
-               document.getElementById("clickCount").innerHTML = clicks;
-           }
-       </script>
-
-

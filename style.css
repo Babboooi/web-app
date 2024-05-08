@@ -1,43 +1,34 @@
-body{
-    background-color: beige;
+body {
+   font-family: Arial, sans-serif;
+   margin: 10;
+   padding: 10;
+   font-size: 30px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 80vh;
+   background-color: orange;
 }
 
-*,
-*:before,
-*:after{
-   box-sizing:border-box;
-}
-html,body{
-   height:100%;
-   margin:auto;
-   padding:400, 803;
-   text-align:center;
+.container {
+   text-align: center;
 }
 
-#Questions{
-   height:100%;
-   background: pink;
-}
-button{
-   padding:10px;
-}
-button:hover{
-   cursor:pointer;
+.question-container {
+   margin-bottom: 20px;
 }
 
-/*
-=================================================
-TYPOGRAPHY
-=================================================
-*/
-h1{
-    margin:auto;
-    padding:150px 0 50px 0;
-    font-family: 'Oswald', sans-serif;
-    font-size:54px;
- }
- p{
-  font-family: 'Roboto', sans-serif; 
-  font-size:18px;
- }
- 
+button {
+   padding: 10px 20px;
+   font-size: 20px;
+   background-color: #007bff;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+button:hover {
+   background-color: #0056b3;
+}

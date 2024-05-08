@@ -1,33 +1,36 @@
- const Questions = [
-   { Question: "What is the capital of France?", options: ["Paris", "Berlin"], answer: 0 },
-   { Question: "What is the largest planet in our solar system?", options: ["Jupiter", "Saturn"], answer: 0 },
-   { Question: "Who wrote 'Romeo and Juliet'?", options: ["William Shakespeare", "Charles Dickens"], answer: 0 },
-   // Add more questions as needed
-];
+const questions = {
+    "Trivia": [
+        "What is the capital of France?",
+        "Who painted the Mona Lisa?",
+        "What is the tallest mountain in the world?",
+        "Which planet is known as the Red Planet?",
+        "What year did the Titanic sink?"
+    ],
+    "Math": [
+        "What is 5 multiplied by 9?",
+        "What is the square root of 64?",
+        "What is the value of pi (π) to two decimal places?",
+        "What is the sum of angles in a triangle?",
+        "What is the next number in the sequence: 1, 1, 2, 3, 5, 8, ...?"
+    ],
+    "Science": [
+        "What is the chemical symbol for water?",
+        "What is the powerhouse of the cell?",
+        "Who developed the theory of relativity?",
+        "What is the smallest bone in the human body?",
+        "What is the process by which plants make their own food called?"
+    ]
+};
 
-function generateQuestion() {
-   const randomIndex = Math.floor(Math.random() * questions.length);
-   const questionObject = questions[randomIndex];
-   document.getElementById("question").innerHTML = questionObject.question;
-   const optionButtons = document.getElementsByClassName("option");
-   for (let i = 0; i < optionButtons.length; i++) {
-       optionButtons[i].innerHTML = questionObject.options[i];
-   }
-   document.getElementById("result").innerHTML = ""; // Clear previous result
+const generateBtn = document.getElementById('generate-btn');
+const questionDisplay = document.getElementById('question');
+
+function generateRandomQuestion() {
+    const categories = Object.keys(questions);
+    const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+    const categoryQuestions = questions[randomCategory];
+    const randomQuestion = categoryQuestions[Math.floor(Math.random() * categoryQuestions.length)];
+    questionDisplay.textContent = randomQuestion;
 }
 
-function checkAnswer(button) {
-   const selectedOption = button.innerHTML;
-   const currentQuestion = document.getElementById("question").innerHTML;
-   const questionObject = questions.find(q => q.question === currentQuestion);
-
-   if (!questionObject) return; // Question not found
-
-   if (selectedOption === questionObject.options[questionObject.answer]) {
-       document.getElementById("result").innerHTML = "Correct!";
-   } else {
-       document.getElementById("result").innerHTML = "Incorrect!";
-   }
-}
-
-window.onload = generateQuestion;
+generateBtn.addEventListener('click', generateRandomQuestion);
