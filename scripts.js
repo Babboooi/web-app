@@ -20,6 +20,13 @@ const questions = {
         "What is the smallest bone in the human body?",
         "What is the process by which plants make their own food called?"
     ]
+    "Basic": [
+       "If you could vacation anywhere in the world, where would it be?",
+       "What are two things still on your bucket list?",
+       "What was the make and model of your first car?",
+       "What sports did you play growing up?",
+       "What is your go-to board game?"
+    ]
 };
 
 const generateBtn = document.getElementById('generate-btn');
